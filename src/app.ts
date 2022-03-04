@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: benz1
  * @Date: 2022-03-04 10:59:43
- * @LastEditTime: 2022-03-04 14:05:10
+ * @LastEditTime: 2022-03-04 14:09:27
  * @LastEditors: benz1
  * @Reference: 
  */
@@ -26,7 +26,7 @@ export class App {
 
     init() {
         app.get("/ipinfo", (req, res) => {
-            console.log(req.headers);
+            console.log(req.headers['x-real-ip']);
             res.json(qqwry.searchIP(req.ip))
         });
     }
